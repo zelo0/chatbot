@@ -1,5 +1,5 @@
 <template>
-  <section class="chat-box">
+  <div class="chat-box">
     <div class="chat-header">현대백화점 챗봇 데모</div>
     <div class="chat-box-list-container" ref="chatbox">
       <ul class="chat-box-list">
@@ -10,9 +10,7 @@
           :class="message.author"
         >
           <div>
-            <!-- <p> -->
             <div v-html="message.text"></div>
-            <!-- </p> -->
             <img
               v-if="message.image"
               :src="require(`~/assets/img/${message.image}`)"
@@ -27,7 +25,7 @@
       <input type="text" v-model="message" @keyup.enter="sendMessage" />
       <button @click="sendMessage">입력</button>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -182,8 +180,6 @@ export default {
   }
 
   .server {
-    // span {
-    //   }
     > div {
       background: #99cc00;
       float: left;
@@ -203,13 +199,12 @@ export default {
 }
 
 .chat-box {
-  // margin: 10px;
   border: 1px solid #999;
   width: 50vw;
   @media screen and (max-width: 600px) {
     width: 95vw;
   }
-  height: 100vh;
+  height: 97vh;
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
