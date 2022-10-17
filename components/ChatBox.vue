@@ -62,7 +62,7 @@ export default {
       this.message = "";
 
       this.$axios
-        .post(`https://chat-hyun.herokuapp.com/chat`, {
+        .post(`https://chat-hyundai.herokuapp.com/chat`, {
           question: message,
         })
         .then((res) => {
